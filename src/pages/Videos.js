@@ -3,6 +3,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import VideoCard from "../components/VideoCard";
 import { useYoutubeApi } from "../context/YoutubeApiContext";
+import { ImSpinner10 } from "react-icons/im";
 export default function Videos() {
   const { keyword } = useParams();
   const { youtube } = useYoutubeApi();
@@ -15,8 +16,14 @@ export default function Videos() {
   });
   return (
     <>
-      <div>Videos {keyword ? `🔍${keyword}` : "🔥"}</div>
-      {isLoading && <p>Loading....</p>}
+      <div className="text-lg flex justify-center">
+        Videos {keyword ? `🔍 : ${keyword}` : ": 🔥 Hot"}
+      </div>
+      {isLoading && (
+        <p>
+          <ImSpinner10 />
+        </p>
+      )}
       {error && <p>Somting is wrong</p>}
       {videos && (
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:gird-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 gap-y-4">

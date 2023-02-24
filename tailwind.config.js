@@ -8,5 +8,6 @@ module.exports = {
       },
     },
   },
+  darkMode: ["class", '[data-mode="dark"]'],
   plugins: [require("@tailwindcss/line-clamp")],
 };

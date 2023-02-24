@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html.dark {
+  @apply bg-zinc-900 text-gray-50;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -12,7 +14,6 @@ body {
   width: 100vw;
   height: 100vh;
   @apply flex flex-col items-center;
-  @apply bg-zinc-900 text-gray-50;
 }
 
 #root {
