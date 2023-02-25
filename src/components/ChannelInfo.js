@@ -10,7 +10,7 @@ export default function ChannelInfo({ id, name }) {
     { staleTime: 1000 * 6 * 5 }
   );
   return (
-    <div className="flex my-4 mb-8 items-center border-b">
+    <div className="flex my-4 mb-8 items-center">
       {url && (
         <img className="w-10 h-10 rounded-full mb-4" src={url} alt={name} />
       )}

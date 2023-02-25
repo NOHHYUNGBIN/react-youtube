@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { BsYoutube, BsSearch } from "react-icons/bs";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { AiFillHome, AiFillLike } from "react-icons/ai";
+import { AiFillHome } from "react-icons/ai";
+import { MdAccessTimeFilled } from "react-icons/md";
 import { HiMoon, HiSun } from "react-icons/hi";
 import { useDarkMode } from "../context/DarkmodeContext";
 import styles from "./DarkMode.module.css";
@@ -36,14 +37,14 @@ export default function SearchHeader() {
           className={
             darkMode
               ? "w-7/12 p-2 border border-white bg-black text-gray-50"
-              : "w-7/12 p-2 border border-black bg-white text-gray-50"
+              : "w-7/12 p-2 border border-black bg-white text-black"
           }
           type="text"
           placeholder="Search.."
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <button className="bg-zinc-600 px-4">
+        <button className={darkMode ? "bg-zinc-600 px-4" : "bg-zinc-300 px-4"}>
           <BsSearch />
         </button>
       </form>
@@ -53,12 +54,12 @@ export default function SearchHeader() {
         </Link>
       </button>
       <button className="mr-10">
-        <AiFillLike />
+        <MdAccessTimeFilled />
       </button>
       <button onClick={handleClick}>
         <img
           className="w-10 h-8 rounded-full"
-          src="../img/NHB.JPG"
+          src="../../img/NHB.JPG"
           alt="hbnoh"
         />
       </button>

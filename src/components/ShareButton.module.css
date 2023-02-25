@@ -1,0 +1,6 @@
+.toggle {
+  transition: all 200ms ease-in-out;
+}
+.toggle:hover {
+  transform: rotateY(360deg);
+}

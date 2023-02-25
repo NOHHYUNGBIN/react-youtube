@@ -14,6 +14,7 @@ export default function VideoCard({ video, type }) {
       }}
     >
       <img
+        style={{ cursor: "pointer" }}
         className={isList ? "w-60 mr-2" : "w-full"}
         src={thumbnails.medium.url}
         alt={title}
