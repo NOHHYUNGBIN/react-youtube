@@ -11,8 +11,8 @@ export default function App() {
   return (
     <>
       <DarkModeProvider>
-        <SearchHeader />
         <YoutubeApiProvider>
+          <SearchHeader />
           <QueryClientProvider client={queryClint}>
             <Outlet />
           </QueryClientProvider>

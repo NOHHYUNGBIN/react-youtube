@@ -30,7 +30,7 @@ const URLShareButton = styled.button`
   background-color: #7362ff;
 `;
 
-export default function ShareButton({ title, defaultUrl, description }) {
+export default function ShareButton({ title, defaultUrl, description, video }) {
   const currentUrl = window.location.href;
   useEffect(() => {
     const script = document.createElement("script");
@@ -82,7 +82,7 @@ export default function ShareButton({ title, defaultUrl, description }) {
           </URLShareButton>
         </CopyToClipboard>
       </GridContainer>
-      <WatchLaterButton />
+      <WatchLaterButton video={video} />
       {contextHolder}
     </div>
   );

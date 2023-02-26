@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import ChannelInfo from "../components/ChannelInfo";
 import RelatedVideos from "../components/RelatedVideos";
 import ShareButton from "../components/ShareButton";
-import WatchLaterButton from "../components/WatchLaterButton";
 
 export default function VideoDetail() {
   const {
@@ -11,6 +10,7 @@ export default function VideoDetail() {
   } = useLocation();
   const { title, channelId, channelTitle, description } = video.snippet;
   const defaultUrl = video.snippet.thumbnails.default.url;
+  const videoId = video.id;
   return (
     <section className="flex flex-col lg:flex-row">
       <article className="basis-4/6">
@@ -27,6 +27,7 @@ export default function VideoDetail() {
           title={title}
           defaultUrl={defaultUrl}
           description={description}
+          video={video}
         />
         <div className="p-8">
           <h2 className="text-xl font-bold">{title}</h2>

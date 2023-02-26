@@ -6,6 +6,7 @@ import { MdAccessTimeFilled } from "react-icons/md";
 import { HiMoon, HiSun } from "react-icons/hi";
 import { useDarkMode } from "../context/DarkmodeContext";
 import styles from "./DarkMode.module.css";
+
 export default function SearchHeader() {
   const { darkMode, toggleDarkMode } = useDarkMode();
   const [text, setText] = useState("");
@@ -17,6 +18,9 @@ export default function SearchHeader() {
   };
   const handleClick = () => {
     window.open("https://github.com/NOHHYUNGBIN", "_blank");
+  };
+  const handlePlayList = () => {
+    navigate(`/playlist`);
   };
   useEffect(() => {
     setText(keyword || "");
@@ -53,7 +57,7 @@ export default function SearchHeader() {
           <AiFillHome />
         </Link>
       </button>
-      <button className="mr-10">
+      <button className="mr-10" onClick={handlePlayList}>
         <MdAccessTimeFilled />
       </button>
       <button onClick={handleClick}>
