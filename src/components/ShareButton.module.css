@@ -2,5 +2,5 @@
   transition: all 200ms ease-in-out;
 }
 .toggle:hover {
-  transform: rotateY(360deg);
+  transform: rotateY(180deg);
 }

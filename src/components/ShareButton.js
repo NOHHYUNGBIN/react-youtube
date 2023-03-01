@@ -31,7 +31,8 @@ const URLShareButton = styled.button`
 `;
 
 export default function ShareButton({ title, defaultUrl, description, video }) {
-  const currentUrl = window.location.href;
+  const currentUrl = `https://www.youtube.com/watch?v=${video.id}`;
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://developers.kakao.com/sdk/js/kakao.js";
