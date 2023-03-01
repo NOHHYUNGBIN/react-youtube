@@ -10,7 +10,6 @@ export default function VideoDetail() {
   } = useLocation();
   const { title, channelId, channelTitle, description } = video.snippet;
   const defaultUrl = video.snippet.thumbnails.default.url;
-  const videoId = video.id;
   return (
     <section className="flex flex-col lg:flex-row">
       <article className="basis-4/6">
@@ -21,6 +20,7 @@ export default function VideoDetail() {
           height="640"
           src={`https://www.youtube.com/embed/${video.id}`}
           title={title}
+          allow="fullscreen"
           // frameborder="0"
         />
         <ShareButton
